@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="age">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="menopause">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>age</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="node_caps">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>menopause</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="inv_nodes">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>node_caps</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="tumor_size">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>inv_nodes</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="deg_malig">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>tumor_size</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="irradiat">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>tumor_size deg_malig</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.1.3724.0 ACADEMIC" name="Network1">
+			<node id="age">
+				<name>age</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>160 74 268 146</position>
+			</node>
+			<node id="menopause">
+				<name>menopause</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>330 217 438 289</position>
+			</node>
+			<node id="node_caps">
+				<name>node_caps</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>455 355 563 427</position>
+			</node>
+			<node id="tumor_size">
+				<name>tumor_size</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>534 509 642 581</position>
+			</node>
+			<node id="inv_nodes">
+				<name>inv_nodes</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>780 353 888 425</position>
+			</node>
+			<node id="deg_malig">
+				<name>deg_malig</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>813 502 921 574</position>
+			</node>
+			<node id="irradiat">
+				<name>irradiat</name>
+				<interior color="e0fdac" />
+				<outline color="ff9900" />
+				<font color="ff9d3c" name="Arial" size="12" bold="true" />
+				<position>720 677 828 749</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
